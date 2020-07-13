@@ -1,8 +1,8 @@
-MPG Regression
+MPG Regression Analysis
 
 Vehicle length and ground clearance both provided a non-random amount of variance to the mpg values in the dataset, with p-values of 2.60e-12 and 5.21e-08, respectfully.
 
-The slope of this linear model is not considered to be zero. The R-squared value is 0.7149.
+The slope of this linear model is not considered to be zero. The R-squared value is 0.7149. This indicates that there is strong correlation between the variables.
 
 This linear model predicts the mpg of MechaCar prototypes effectively--the p-value for the model is 5.35e-11. However, the intercept is also statistically significant in this model. This means that there are other variables and factors that contribute to the variation in mpg that are not included in the model.
 
@@ -24,7 +24,9 @@ F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 
 Suspension Coil Summary
 
-The table above provides summary statistics for the suspension coil's pounds-per-inch continuous variable.
+A summary of the statistics related to suspension coil testing shows that they perform within the design specifications of having less than 100 pounds-per-inch variance. The statistical variance is 62.29 and the standard deviation is 7.89.
+
+The table below provides summary statistics for the suspension coil's pounds-per-inch continuous variable.
 
      nbr.val     nbr.null       nbr.na          min          max        range 
 1.500000e+02 0.000000e+00 0.000000e+00 1.452000e+03 1.542000e+03 9.000000e+01 
@@ -36,8 +38,9 @@ The table above provides summary statistics for the suspension coil's pounds-per
 
 Suspension Coil T-Test
 
-	One Sample t-test
-data:  (Suspension_Coil$PSI)
+A one sample t-test shows that the sample suspension coil pounds-per-inch are not statistically different than the population average of 1,500 pounds-per-inch. The p-value is 0.06028, which is above the common significance level of 0.05 percent.
+
+One Sample t-test data:  (Suspension_Coil$PSI)
 t = -1.8931, df = 149, p-value = 0.06028
 alternative hypothesis: true mean is not equal to 1500
 95 percent confidence interval:
@@ -46,3 +49,11 @@ sample estimates:
 mean of x 
   1498.78
 
+
+Statistical Study Design
+
+In order to test the performance of the MechaCar prototype vehicle to other comparable vehicles on the market we need to collect new data on the MechaCar and other vehicles. Many consumers will make their decision of purchase for an automobile based on color, fuel efficiency, purchase price, estimated maintenance cost, and safety ratings. Upon collecting this data we can calculate an average performance rating for each vehicle.
+
+For this analysis our null hypothesis would be there is no statistical difference in the performance of the MechaCar compared to other comparable vehicles.  OUr alternative hypothesis is that there is a statistical difference in the performance of the MechaCar compared to other comparable vehicles. We can test these hypothesis with a two-sample t-test.
+
+To perform this two-sample t-test we will need to collect user data such as popularity of color, test results of mpg, consumer views of purchase price, estimated maintenance cost, and ratings for safety of the vehicles in the comparison. We can create an overall average performance rating for each vehicle.
